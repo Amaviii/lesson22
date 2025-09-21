@@ -16,18 +16,5 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
-
-        val students = listOf(
-            Student("John", 5.0),
-            Student("Sara", 3.0),
-            Student("Max", 2.5),
-        )
-
-        val adapter = MyAdapter(students)
-
-        binding?.recyclerView?.layoutManager = LinearLayoutManager(this)
-        binding?.recyclerView?.adapter = adapter
-
-    }
+        }
 }
