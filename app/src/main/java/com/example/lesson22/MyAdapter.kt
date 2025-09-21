@@ -9,12 +9,12 @@ class MyAdapter(private val students: List<Student>) : RecyclerView.Adapter<MyAd
 
     class MyViewHolder(val binding: StudentsLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(student: Student) {
-            binding.textView.text = student.name
+            binding.tvName.text = student.name
             var rating: Double = student.rating
-            binding.button.text = rating.toString()
-            binding.button.setOnClickListener {
+            binding.tvRating.text = rating.toString()
+            binding.tvRating.setOnClickListener {
                 rating = rating + 0.01
-                binding.button.text = rating.toString()
+                binding.tvRating.text = rating.toString()
             }
 
         }

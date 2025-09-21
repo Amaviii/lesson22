@@ -24,10 +24,9 @@ class MainActivity : AppCompatActivity() {
             Student("Max", 2.5),
         )
 
-        val adapter = MyAdapter(students)
 
         binding?.recyclerView?.layoutManager = LinearLayoutManager(this)
-        binding?.recyclerView?.adapter = adapter
+        binding?.recyclerView?.adapter = MyAdapter(students)
 
     }
 }
